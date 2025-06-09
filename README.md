@@ -72,7 +72,7 @@ Key findings:
 
 ```text
 online-retail-pricing/
-├── data/                  # Data files
+├── data/                 # Data files
 │   ├── raw/              # Original data files
 │   └── processed/        # Cleaned/processed data
 ├── notebooks/            # Jupyter notebooks
@@ -80,6 +80,8 @@ online-retail-pricing/
 │   ├── figures/          # Visualizations
 │   └── results/          # Model outputs
 ├── src/                  # Python modules
+├── main.py               # Main Python script
+├── requirements.txt      # Requirements
 └── README.md             # Project documentation
 ```
 
