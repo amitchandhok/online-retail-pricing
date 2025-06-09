@@ -70,6 +70,16 @@ Key findings:
 
 ## Repository Structure
 
+online-retail-pricing/
+├── data/ # Data files
+│ ├── raw/ # Original data files
+│ └── processed/ # Cleaned/processed data
+├── notebooks/ # Jupyter notebooks
+├── reports/ # Analysis outputs
+│ ├── figures/ # Vizualizations
+│ └── results/ # Model outputs
+├── src/ # Python modules
+└── README.md # Project documentation
 
 ## How to Reproduce
 
