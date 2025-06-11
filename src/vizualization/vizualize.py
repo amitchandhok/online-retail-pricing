@@ -78,3 +78,16 @@ def plot_revenue_concentration(df: pd.DataFrame, output_dir: str = 'reports/figu
     plt.tight_layout()
     plt.savefig(f'{output_dir}/revenue_concentration.png')
     plt.close()
+
+def sku_correlation(df: pd.DataFrame, output_dir: str = 'reports/figures'):
+    """Plot correlation between SKUs"""
+    # Calculate pairwise correlation of purchase co-occurrence
+    pivot = df.pivot_table(index='InvoiceNo', columns='StockCode', 
+                        values='Quantity', fill_value=0)
+    corr_matrix = pivot.corr()
+
+    # Cluster and plot
+    sns.clustermap(corr_matrix, cmap='coolwarm', center=0, figsize=(12,10))
+    plt.title('SKU Purchase Correlations')
+    plt.savefig(f'{output_dir}/sku_correlation.png')
+    plt.close()

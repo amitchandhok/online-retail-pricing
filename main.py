@@ -31,7 +31,8 @@ def main():
     vizualize.plot_price_quantity(df)
     vizualize.plot_top_skus(df)
     vizualize.plot_revenue_concentration(df)
-    
+    vizualize.sku_correlation(df)
+
     # Modeling
     print("Training models...")
     results_df = train_model.train_sku_models(train_df, test_df)
